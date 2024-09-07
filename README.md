@@ -1,7 +1,7 @@
 # BeyondSight
 
 -----------------------------------
-Notes on the datasert from the Challenge Advisor
+Notes on the dataset from the Challenge Advisor
 -----------------------------------
 
 
