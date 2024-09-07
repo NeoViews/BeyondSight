@@ -1,9 +1,8 @@
 # BeyondSight
 
------------------------------------
-Notes on the dataset from the Challenge Advisor
------------------------------------
+---
 
+## Notes on the dataset from the Challenge Advisor
 
 There are 14 datasets, each with 10000 rows and around 60-70 columns.
 
