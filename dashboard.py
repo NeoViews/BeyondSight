@@ -11,10 +11,11 @@ from plotly.subplots import make_subplots
 # Set device to GPU if available
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-# Step 1: Load dataset
+# Part 1: Load dataset and preprocessing
+# Load dataset
 df = pd.read_csv('data/tracking_data_full_subset2.csv')
 
-# Step 2: Rename the unnamed columns to match their corresponding X-coordinate columns
+# Rename the unnamed columns to match their corresponding X-coordinate columns
 new_columns = []
 for i, col in enumerate(df.columns):
     if 'Unnamed' in col:
@@ -26,10 +27,10 @@ for i, col in enumerate(df.columns):
 # Apply the new column names to the DataFrame
 df.columns = new_columns
 
-# Step 3: Handle NaN values
+# Handle NaN values
 df = df.fillna(0)  # Fill NaN values with 0, or you can use interpolation
 
-# Step 4: Prepare the data for LSTM
+# Prepare the data for LSTM
 def preprocess_data(df, sequence_length=50):
     sequences = []
     for i in range(len(df) - sequence_length):
@@ -37,7 +38,8 @@ def preprocess_data(df, sequence_length=50):
         sequences.append(sequence)
     return np.array(sequences)
 
-# Step 5: Define the LSTM model
+# Part 2: LSTM predictions
+# Define the LSTM model
 class BeyondSightLSTM(nn.Module):
     def __init__(self, input_size, hidden_size, output_size, num_layers=1):
         super(BeyondSightLSTM, self).__init__()
@@ -59,7 +61,7 @@ class BeyondSightLSTM(nn.Module):
         out = self.fc(out)
         return out
 
-# Step 6: Initialize the model, loss function, and optimizer
+# Initialize the model, loss function, and optimizer
 input_size = 62  # Each row has 62 features (31 X-Y coordinate pairs)
 hidden_size = 128  # Number of LSTM units
 output_size = 62  # Output size should match the input size
@@ -73,7 +75,6 @@ model.eval()
 criterion = nn.MSELoss()  # Mean Squared Error Loss for regression tasks
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
-# Step 7: Make predictions using the loaded model
 def get_predictions_and_errors(df, model, sequence_length=50):
     sequences = preprocess_data(df, sequence_length)
     X = sequences[:, :-1, :]  # All but the last time step for input
@@ -95,8 +96,11 @@ def get_predictions_and_errors(df, model, sequence_length=50):
     # Calculate the error per variable per sequence (Mean Absolute Error)
     error = np.abs(y_pred_last - y_actual_last)  # (num_sequences, 62)
     
+    # Create a timestamp range for 0 to 90 minutes (or based on the actual duration)
+    num_minutes = len(y_pred_last)  # This should match the number of sequences
+    timestamps = pd.Series(range(0, num_minutes))  # Minutes from 0 to num_minutes-1
+    
     # Create a DataFrame to store the results
-    timestamps = pd.date_range(start="2023-01-01", periods=len(y_pred_last), freq="min")  # Example timestamps
     results_df = pd.DataFrame({
         "timestamp": timestamps,
         **{f"actual_{i}": y_actual_last[:,i] for i in range(input_size)},
@@ -106,10 +110,12 @@ def get_predictions_and_errors(df, model, sequence_length=50):
     
     return results_df
 
+
 # Get predictions and errors for visualization
 results_df = get_predictions_and_errors(df, model)
 
-# Step 8: Initialize Dash app
+# Part 3: Dashboard
+# Initialize Dash app
 app = dash.Dash(__name__)
 
 # Step 9: Create a list of variable names based on the DataFrame columns
