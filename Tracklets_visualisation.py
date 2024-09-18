@@ -237,8 +237,10 @@ for s in range(2, nb):
 
     nrows = tracking_data_partial.shape[0]
 
-    for j in range(1, nrows, 1):
-        print("j=", j)
+    for j in range(0,nrows,1):
+        print("j=",j)
+        while j == 1:
+            pass
         if isDrawing:
             figobjs_results = []
             objs = axResult.annotate(str(j), (-52, -32), fontsize=12)
