@@ -1,0 +1,37 @@
+{
+  "os":  "macOS-14.4.1-arm64-arm-64bit",
+  "python":  "3.12.4",
+  "startedAt":  "2024-09-18T15:55:42.363098Z",
+  "program":  "/Users/dakotachang/BeyondSight/lstm_model.py",
+  "codePath":  "lstm_model.py",
+  "git":  {
+    "remote":  "https://github.com/NeoViews/BeyondSight.git",
+    "commit":  "456a2b3258f3426ced5db1b1ddfdae6c6a9fdbb9"
+  },
+  "email":  "dakotacsk@gmail.com",
+  "root":  "/Users/dakotachang/BeyondSight",
+  "host":  "Dakotas-MBP-2.olin.edu",
+  "username":  "dakotachang",
+  "executable":  "/opt/anaconda3/envs/myenv/bin/python3",
+  "codePathLocal":  "lstm_model.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "455914725376"
+    }
+  },
+  "memory":  {
+    "total":  "8589934592"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  },
+  "gpuapple":  {
+    "gpuType":  "Apple M2",
+    "vendor":  "sppci_vendor_Apple",
+    "cores":  10
+  }
+}
