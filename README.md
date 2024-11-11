@@ -1,7 +1,5 @@
 # BeyondSight
 
----
-
 ## Notes on the Dataset
 
 There are 14 datasets, each with 10000 rows and around 60-70 columns.
@@ -15,3 +13,11 @@ There are usually 22 main players (11 each side) and there might be some substit
 Each player will have two columns for the X and Y coordinate. These columns might contain numeric values (when appearing in the camera view) or NaN if disappeared from the view. Each player might appear/reappear multiple times.
 
 The ball has 2 columns of coordinates XY which are the first two columns of the data. The four corners of the camera will have 4x2=8 columns of XY data. These 8 columns will be the last 8 columns. The other columns are for the players. The first 24 columns (12 players) are the away team (the 12th is the goal keeper) and the latter 28 (14 players) are the home team (the 14th is the goal keeper).
+
+## Generating Dashboard
+
+After install all the libraries in `requirements.txt`, run `python dashboard.py`. It will take a second to run but when it does an http link will appear. Copy and paste that into your browser of choice to see the dashboard.
+
+## Visualizing Data
+
+In `Tracklets_visualisation.py` you can view the data. It is currently set to display collected data of on screen players. You can adjust this (around line 230) to instead display `predicted.csv`
