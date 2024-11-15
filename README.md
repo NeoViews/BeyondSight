@@ -9,8 +9,6 @@
 
 <img align=right src="https://github.com/user-attachments/assets/04f8bc7a-f4f5-44e5-9215-dd0752474c62" height=300>
 
-<br>
-
 <div align="center">
   This repository contains a machine learning-based dashboard designed to predict and visualize “invisible” players on a football field in real-time by analyzing video data frame by frame.
   <br><br><br>
@@ -59,7 +57,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
 
 <p align=center> With a dataset of the XY Positions of players on the field every frame, our goal was to predict the positions of the players that either the cameras could not capture due to the camera’s angle and frame, substitute players, or other players not located on the field.</p>
 
-<br><br>
+<br>
   
 <p align=center> By using Machine Learning models that can be trained and validated by our datasets, we planned to predict these “invisible” players with as much accuracy as possible.</p>
 
