@@ -39,7 +39,7 @@
   <li><a href="#credits-and-acknowledgements">Credits and Acknowledgments</a></li>
 </ol>
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 
 <br><br>
 
@@ -56,7 +56,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
     <li><strong>CRISP-DM:</strong> Cross Industry Process for Data Mining, 6 phase methodology on how to transform a business problem into a data science based solution using measurable analytics</li>
   </ol>
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 
 <br><br>
 
@@ -71,7 +71,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
   
 <p align=center> By using Machine Learning models that can be trained and validated by our datasets, we planned to predict these “invisible” players with as much accuracy as possible.</p>
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 
 <br><br>
 
@@ -80,7 +80,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
 
 
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 <br><br>
 
 <!-- MODEL EXPLANATION -->
@@ -88,7 +88,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
 
 
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 <br><br>
 
 <!-- RELEVANT TOOLS AND LIBRARIES -->
@@ -96,7 +96,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
 
 
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 <br><br>
 
 <!-- GENERATING DASHBOARD -->
@@ -104,7 +104,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
 
 
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 <br><br>
 
 <!-- NEXT STEPS -->
@@ -112,7 +112,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
 
 
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 <br><br>
 
 <!-- LICENSE -->
@@ -120,7 +120,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
 
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 
 
 <!-- CREDITS AND ACKNOWLEDGEMENTS -->
@@ -128,7 +128,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 
 
-<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/edit/main/README.md#----beyond-sight------">back to top</a>)</p>
 <br><br>
 
 
