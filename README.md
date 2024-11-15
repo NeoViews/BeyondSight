@@ -1,12 +1,14 @@
+<!-- HEADER -->
 <div align="center">
   <!-- Source: https://tenor.com/view/football-soccer-ball-goal-golazo-gif-21897044 -->
   <img src="https://github.com/user-attachments/assets/d03a49d5-8eb5-440b-bc9d-75f4eabffde4" height=80>
   <h1>
     Beyond Sight
-    <br><br> August 2024 - November 2024
+    <br><br>
   </h1>
 </div>
 
+<!-- DESCRIPTION -->
 <img align=right src="https://github.com/user-attachments/assets/04f8bc7a-f4f5-44e5-9215-dd0752474c62" height=300>
 
 <div align="center">
@@ -23,20 +25,25 @@
 
 <br><br><br><br>
 
+<!-- TABLE OF CONTENTS -->
 <h2>Table of Contents</h2>
-  <ol>
-    <li><a href="#business-context">Business Context</a></li>
-    <li><a href="#goals">Goals</a></li>
-    <li><a href="#data-explanation">Data Explanation</a></li>
-    <li><a href="#model-explanation">Model Explanation</a></li>
-    <li><a href="#relevant-tools-and-libraries">Relevant Tools and Libraries</a></li>
-    <li><a href="#generating-dashboard">Generating Dashboard</a></li>
-    <li><a href="#next-steps">Next Steps</a></li>
-    <li><a href="#credits-and-acknowledgements">Credits and Acknowledgments</a></li>
-  </ol>
+<ol>
+  <li><a href="#business-context">Business Context</a></li>
+  <li><a href="#goals">Goals</a></li>
+  <li><a href="#data-explanation">Data Explanation</a></li>
+  <li><a href="#model-explanation">Model Explanation</a></li>
+  <li><a href="#relevant-tools-and-libraries">Relevant Tools and Libraries</a></li>
+  <li><a href="#generating-dashboard">Generating Dashboard</a></li>
+  <li><a href="#next-steps">Next Steps</a></li>
+  <li><a href="#license">License</a></li>
+  <li><a href="#credits-and-acknowledgements">Credits and Acknowledgments</a></li>
+</ol>
+
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
 
 <br><br>
 
+<!-- BUSINESS CONTEXT -->
 ## Business Context
 
 This project is based on sports data analytics, and we are leveraging raw video tracking data and machine learning tools/practices to deliver real-time analysis of football players’ positions.
@@ -49,8 +56,11 @@ This project is based on sports data analytics, and we are leveraging raw video 
     <li><strong>CRISP-DM:</strong> Cross Industry Process for Data Mining, 6 phase methodology on how to transform a business problem into a data science based solution using measurable analytics</li>
   </ol>
 
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+
 <br><br>
 
+<!-- GOALS -->
 ## Goals
 
 <img align=left height=200 src="https://github.com/user-attachments/assets/a425b070-0f1e-4b8d-83c5-54a7b5a39aad">
@@ -61,14 +71,65 @@ This project is based on sports data analytics, and we are leveraging raw video 
   
 <p align=center> By using Machine Learning models that can be trained and validated by our datasets, we planned to predict these “invisible” players with as much accuracy as possible.</p>
 
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+
 <br><br>
 
+<!-- DATA EXPLANATION -->
 ## Data Explanation
 
 
 
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<br><br>
+
+<!-- MODEL EXPLANATION -->
+## Model Explanation
 
 
+
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<br><br>
+
+<!-- RELEVANT TOOLS AND LIBRARIES -->
+## Relevant Tools and Libraries
+
+
+
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<br><br>
+
+<!-- GENERATING DASHBOARD -->
+## Generating Dashboard
+
+
+
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<br><br>
+
+<!-- NEXT STEPS -->
+## Next Steps
+
+
+
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<br><br>
+
+<!-- LICENSE -->
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+
+
+<!-- CREDITS AND ACKNOWLEDGEMENTS -->
+## Credits and Acknowledgements
+
+
+
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight">back to top</a>)</p>
+<br><br>
 
 
 
