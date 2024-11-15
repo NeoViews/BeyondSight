@@ -43,6 +43,7 @@
 
 <br><br>
 
+
 <!-- BUSINESS CONTEXT -->
 ## Business Context
 
@@ -78,7 +79,41 @@ This project is based on sports data analytics, and we are leveraging raw video 
 <!-- DATA EXPLANATION -->
 ## Data Explanation
 
+<img align=right src="https://github.com/user-attachments/assets/0a81614b-f00d-4981-98a8-fd69c32de85e">
 
+<div align=center>
+  
+`BeyondSight/data/`
+
+In `Tracklets_visualisation.py` you can view the data. It is currently set to display collected data of on-screen players. You can adjust this (around line 230) to instead display `predicted.csv`
+
+There are 14 datasets, 13 of which are snippets of the 90-minute football game (our training sets) and 1 of which is the full 90-minute game (the testing set).
+
+</div>
+
+
+
+<br><br>
+
+Each of the datasets are CSV files
+
+<strong>Rows: </strong> Each frame of the game is represented by a singular row
+<br>
+25 frames per second x a 90-minute video = ~135000 frames (rows)
+<br><br>
+<strong>Columns: </strong> The XY position of each player, the ball, and the 4 corners of the camera views found in the game. These columns might contain numeric values (when appearing in the camera view) or NaN if the player disappears from the view. Each player might appear/reappear multiple times.
+<br>
+25 players (2 x 11 main players and 3 substitutes) + 4 cameras + 1 ball = 60 pairs of XY coordinates
+
+<br><br>
+The ball has 2 columns of coordinates XY which are the first two columns of the data. The four corners of the camera will have 4x2=8 columns of XY data. These 8 columns will be the last 8 columns. The other columns are for the players. The first 24 columns (12 players) are the away team (the 12th is the goalkeeper) and the latter 28 (14 players) are the home team (the 14th is the goalkeeper). 
+
+<br>
+<strong>Note: </strong> there might be some substitutes so the total number of players might be between 22 and 28 (if 3 is the maximum number of substitutes)
+
+<br><br>
+
+Our goal was to use Machine Learning models to predict the XY positions that were not applicable (i.e. the positions that were labeled as NaN in the training set but found in the testing set)
 
 <p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight------">back to top</a>)</p>
 <br><br>
@@ -102,7 +137,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
 <!-- GENERATING DASHBOARD -->
 ## Generating Dashboard
 
-
+After installing all the libraries in `requirements.txt`, run `python dashboard.py`. It will take a second to run but when it does an http link will appear. Copy and paste that into your browser of choice to see the dashboard.
 
 <p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight------">back to top</a>)</p>
 <br><br>
@@ -130,40 +165,3 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight------">back to top</a>)</p>
 <br><br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-## Notes on the Dataset
-
-There are 14 datasets, each with 10000 rows and around 60-70 columns.
-
-Each row corresponds to a video frame (there are usually 25 frames per second so a 90-minute video will have around 135000 frames).
-
-The columns are for the XY coordinates of the players, the ball and the four corners of the camera views (you don’t have to use the and the camera corners).
-
-There are usually 22 main players (11 each side) and there might be some substitutes so the total number of players might be between 22 and 28 (if 3 is the maximum number of substitutes)
-
-Each player will have two columns for the X and Y coordinate. These columns might contain numeric values (when appearing in the camera view) or NaN if disappeared from the view. Each player might appear/reappear multiple times.
-
-The ball has 2 columns of coordinates XY which are the first two columns of the data. The four corners of the camera will have 4x2=8 columns of XY data. These 8 columns will be the last 8 columns. The other columns are for the players. The first 24 columns (12 players) are the away team (the 12th is the goal keeper) and the latter 28 (14 players) are the home team (the 14th is the goal keeper).
-
-## Generating Dashboard
-
-After install all the libraries in `requirements.txt`, run `python dashboard.py`. It will take a second to run but when it does an http link will appear. Copy and paste that into your browser of choice to see the dashboard.
-
-## Visualizing Data
-
-In `Tracklets_visualisation.py` you can view the data. It is currently set to display collected data of on screen players. You can adjust this (around line 230) to instead display `predicted.csv`
-
