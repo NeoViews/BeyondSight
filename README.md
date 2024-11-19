@@ -9,7 +9,7 @@
 </div>
 
 <!-- DESCRIPTION -->
-<img align=right src="https://github.com/user-attachments/assets/04f8bc7a-f4f5-44e5-9215-dd0752474c62" height=300>
+<img align="right" src="https://github.com/user-attachments/assets/04f8bc7a-f4f5-44e5-9215-dd0752474c62" height=300>
 
 <div align="center">
   This repository contains a machine learning-based dashboard designed to predict and visualize “invisible” players on a football field in real-time by analyzing video data frame by frame.
@@ -31,7 +31,8 @@
   <li><a href="#business-context">Business Context</a></li>
   <li><a href="#goals">Goals</a></li>
   <li><a href="#data-explanation">Data Explanation</a></li>
-  <li><a href="#current-machine-learning-model-explanation">Current Machine Learning Model Explanation</a></li>
+  <li><a href="#lstm-model-explanation">LSTM Model Explanation</a></li>
+  <li><a href="#lstm-model-performance">LSTM Model Performance</a></li>
   <li><a href="#relevant-tools-and-libraries">Relevant Tools and Libraries</a></li>
   <li><a href="#generating-dashboard">Generating Dashboard</a></li>
   <li><a href="#next-steps">Next Steps</a></li>
@@ -48,8 +49,8 @@
 ## Business Context
 
 This project is based on sports data analytics, and we are leveraging raw video tracking data and machine learning tools/practices to deliver real-time analysis of football players’ positions.
-<br>
-<h3 align=center>Definitions</h3>
+<br><br>
+<h3 align="center">Definitions</h3>
 <ol>
     <li><strong>Football:</strong> The video data being analyzed will be a 90-minute recording of the game also referred to as soccer in the United States</li>
     <br>
@@ -67,13 +68,13 @@ This project is based on sports data analytics, and we are leveraging raw video 
 <!-- GOALS -->
 ## Goals
 
-<img align=left height=200 src="https://github.com/user-attachments/assets/a425b070-0f1e-4b8d-83c5-54a7b5a39aad">
+<img align="left" height=200 src="https://github.com/user-attachments/assets/a425b070-0f1e-4b8d-83c5-54a7b5a39aad">
 
-<p align=center> With a dataset of the XY Positions of players on the field every frame, our goal was to predict the positions of the players that either the cameras could not capture due to the camera’s angle and frame, substitute players, or other players not located on the field.</p>
+<p align="center"> With a dataset of the XY Positions of players on the field every frame, our goal was to predict the positions of the players that either the cameras could not capture due to the camera’s angle and frame, substitute players, or other players not located on the field.</p>
 
 <br>
   
-<p align=center> By using Machine Learning models that can be trained and validated by our datasets, we planned to predict these “invisible” players with as much accuracy as possible.</p>
+<p align="center"> By using Machine Learning models that can be trained and validated by our datasets, we planned to predict these “invisible” players with as much accuracy as possible.</p>
 
 <p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight------">back to top</a>)</p>
 
@@ -82,7 +83,7 @@ This project is based on sports data analytics, and we are leveraging raw video 
 <!-- DATA EXPLANATION -->
 ## Data Explanation
 
-<img align=right src="https://github.com/user-attachments/assets/0a81614b-f00d-4981-98a8-fd69c32de85e">
+<img align="right" src="https://github.com/user-attachments/assets/0a81614b-f00d-4981-98a8-fd69c32de85e">
 
 <h3>How to Visualize Data in Simulation</h3>
 
@@ -117,20 +118,27 @@ Use Machine Learning models to predict the XY positions that were not applicable
 <p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight------">back to top</a>)</p>
 <br><br>
 
-<!-- CURRENT MACHINE LEARNING MODEL EXPLANATION -->
-## Current Machine Learning Model Explanation
+<!-- LSTM MODEL EXPLANATION -->
+## LSTM Model Explanation
 
-<img align=left height=225 src="https://github.com/user-attachments/assets/46cfb14f-da29-4660-bcb6-9b08baaf5f6f">
+<img align="left" height=225 src="https://github.com/user-attachments/assets/46cfb14f-da29-4660-bcb6-9b08baaf5f6f">
 
 
 After experimenting with the prospects of using different models we have researched, we decided to use a Long Short-Term Memory (LSTM) Model.
 <br><br>
 If you'd like to learn more about LSTM models, please visit [this website](https://www.geeksforgeeks.org/deep-learning-introduction-to-long-short-term-memory/)
 <br><br>
-With this model, we were able to compare multiple position-based variables to determine, using timestamps, the relative proximity of the invisible players with respect to the visible players
+With this model, we were able to compare multiple position-based variables to determine, using timestamps, the relative proximity of the invisible players with respect to the visible players.
 <br><br>
-As seen in the dashboard, determining the overlap of the lines is how we were able to predict our accuracy
+As seen in the dashboard, determining the overlap of the lines is how we were able to predict our accuracy.
 
+<p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight------">back to top</a>)</p>
+<br><br>
+
+<!-- LSTM MODEL PERFORMANCE -->
+## LSTM Model Performance
+
+<img height=400 src="https://github.com/user-attachments/assets/26e6cc91-de78-4642-93a1-5c19338a4226">
 
 
 <p align="right">(<a href="https://github.com/NeoViews/BeyondSight/tree/main?tab=readme-ov-file#----beyond-sight------">back to top</a>)</p>
