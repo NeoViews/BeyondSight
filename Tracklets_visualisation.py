@@ -246,7 +246,7 @@ colors2 = np.array(
 nb = 14
 for s in range(2, nb):
     tracking_data_partial_filename = (
-        dst_folder + "/tracking_data_full_subset2"  + ".csv"
+       dst_folder + "/tracking_data_partially_observed_subset" + str(s + 1) + ".csv"
     )
     tracking_data_partial = np.loadtxt(
         tracking_data_partial_filename, delimiter=",", skiprows=1
