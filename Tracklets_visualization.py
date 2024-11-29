@@ -1,6 +1,6 @@
 """
 tracklets_visualisation.py
-Author: BeyondInsight Team
+Author: NeoViews
 Date: Nov 19, 2024
 
 Description:
