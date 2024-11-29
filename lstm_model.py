@@ -1,5 +1,25 @@
-import os
+"""
+lstm_model.py
+Author: BeyondInsight Team
+Date: Nov 19,2024
 
+Description:
+This script implements the training pipeline for an LSTM model to predict soccer 
+tracking data. It integrates with Weights and Biases (WandB) for experiment tracking 
+and logs training metrics for analysis.
+
+Key Features:
+- Data preprocessing for LSTM training.
+- Definition of an LSTM model with configurable parameters.
+- Model training loop with WandB integration for logging and monitoring.
+- Automatic saving of the best-performing model.
+
+Usage:
+Run this script to train the LSTM model. Ensure the tracking data 
+(`tracking_data_full_subset2.csv`) is available in the `data` directory.
+"""
+
+import os
 import numpy as np
 import pandas as pd
 import torch
@@ -47,6 +67,19 @@ df = df.fillna(0)  # Fill NaN values with 0, or you can use interpolation
 
 # Step 4: Prepare the data for LSTM
 def preprocess_data(df):
+    """
+    Prepares the dataset for LSTM model training by creating sequences.
+
+    Parameters:
+    ----------
+    df : pandas.DataFrame
+        The dataset containing the input features.
+
+    Returns:
+    -------
+    np.array
+        A NumPy array of sequences, each of a fixed sequence length.
+    """
     sequences = []
     sequence_length = 50  # Define the length of the sequence
 
@@ -60,7 +93,35 @@ def preprocess_data(df):
 
 # Step 5: Define the LSTM model
 class BeyondSightLSTM(nn.Module):
+    """
+    LSTM model for multi-step prediction of player and ball positions.
+
+    Attributes:
+    ----------
+    input_size : int
+        The number of features in the input (e.g., 62 for X-Y coordinate pairs).
+    hidden_size : int
+        The number of units in each LSTM layer.
+    output_size : int
+        The size of the output (should match the input size).
+    num_layers : int, optional
+        The number of stacked LSTM layers (default is 1).
+    """
     def __init__(self, input_size, hidden_size, output_size, num_layers=1):
+        """
+        Initializes the LSTM model with the specified parameters.
+
+        Parameters:
+        ----------
+        input_size : int
+            Number of features in the input data.
+        hidden_size : int
+            Number of units in the LSTM layer.
+        output_size : int
+            Size of the model's output.
+        num_layers : int, optional
+            Number of stacked LSTM layers (default is 1).
+        """
         super(BeyondSightLSTM, self).__init__()
         self.hidden_size = hidden_size
         self.num_layers = num_layers
@@ -72,6 +133,19 @@ class BeyondSightLSTM(nn.Module):
         self.fc = nn.Linear(hidden_size, output_size)
 
     def forward(self, x):
+        """
+        Forward pass for the LSTM model.
+
+        Parameters:
+        ----------
+        x : torch.Tensor
+            Input tensor of shape (batch_size, sequence_length, input_size).
+
+        Returns:
+        -------
+        torch.Tensor
+            Output tensor of shape (batch_size, sequence_length, output_size).
+        """
         h0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
         c0 = torch.zeros(self.num_layers, x.size(0), self.hidden_size).to(x.device)
         out, _ = self.lstm(x, (h0, c0))
@@ -97,6 +171,21 @@ optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
 # Step 7: Prepare data loaders
 def prepare_dataloaders(sequences, batch_size=32):
+    """
+    Prepares data loaders for training the LSTM model.
+
+    Parameters:
+    ----------
+    sequences : np.array
+        Array of sequences created from the dataset.
+    batch_size : int, optional
+        Number of samples per batch (default is 32).
+
+    Returns:
+    -------
+    torch.utils.data.DataLoader
+        DataLoader for batching and shuffling the data.
+    """
     X = sequences[:, :-1, :]  # All but the last time step for input
     y = sequences[:, 1:, :]  # Shifted by one for target output
     X_tensor = torch.tensor(X, dtype=torch.float32)
@@ -110,6 +199,26 @@ def prepare_dataloaders(sequences, batch_size=32):
 
 # Step 8: Train the model with WandB logging and model saving
 def train_model(model, train_loader, criterion, optimizer, epochs=10):
+    """
+    Trains the LSTM model with logging and model saving.
+
+    Parameters:
+    ----------
+    model : BeyondSightLSTM
+        The LSTM model to be trained.
+    train_loader : torch.utils.data.DataLoader
+        DataLoader containing training data.
+    criterion : torch.nn.Module
+        Loss function for the training process.
+    optimizer : torch.optim.Optimizer
+        Optimizer for updating the model parameters.
+    epochs : int, optional
+        Number of epochs for training (default is 10).
+
+    Returns:
+    -------
+    None
+    """
     best_loss = float("inf")  # Initialize with a high value
     best_model_path = "best_model.pth"  # Path to save the best model
 
