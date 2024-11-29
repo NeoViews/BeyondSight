@@ -1,0 +1,31 @@
+{
+  "os":  "macOS-10.16-x86_64-i386-64bit",
+  "python":  "3.10.9",
+  "startedAt":  "2024-10-05T18:53:36.985499Z",
+  "program":  "/Users/wliang/Desktop/BeyondSight/istm_model_comparison.py",
+  "codePath":  "istm_model_comparison.py",
+  "git":  {
+    "remote":  "https://github.com/NeoViews/BeyondSight.git",
+    "commit":  "0021e43c03dd17fcad91c59327115afa644e0f68"
+  },
+  "root":  "/Users/wliang/Desktop/BeyondSight",
+  "host":  "Wenhuas-MacBook-Air.local",
+  "username":  "wliang",
+  "executable":  "/Users/wliang/Desktop/BeyondSight/venv/bin/python",
+  "codePathLocal":  "istm_model_comparison.py",
+  "cpu_count":  8,
+  "cpu_count_logical":  8,
+  "disk":  {
+    "/":  {
+      "total":  "494384795648",
+      "used":  "362067632128"
+    }
+  },
+  "memory":  {
+    "total":  "17179869184"
+  },
+  "cpu":  {
+    "count":  8,
+    "countLogical":  8
+  }
+}

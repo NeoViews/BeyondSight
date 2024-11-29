@@ -1,3 +1,21 @@
+"""
+tracklets_visualisation.py
+Author: NeoViews
+Date: Nov 19, 2024
+
+Description:
+This script visualizes the tracking data of players and the ball on a soccer pitch. 
+It uses Matplotlib to plot positions frame-by-frame, enabling analysis of player 
+and ball movement dynamics during the game.
+
+Key Features:
+- Functionality to plot a soccer pitch with customizable dimensions and style.
+- Visualization of player and ball positions across frames.
+- Frame-by-frame animation of the soccer match.
+
+Usage:
+Run this script to generate a visual representation of the soccer match. 
+"""
 import matplotlib.pyplot as plt
 import numpy as np
 
