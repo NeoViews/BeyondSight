@@ -1,6 +1,6 @@
 """
 lstm_model_comparison.py
-Author: BeyondInsight Team
+Author: Beyondsight Team
 Date: Nov 19, 2024
 
 Description:
